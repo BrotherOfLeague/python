@@ -14,6 +14,7 @@ message = MIMEMultipart()
 # message['MIME-Version'] = 2.0
 message['From'] = sender
 message['To'] = '846058904@qq.com'
+message['Author'] = 'fanbinglin'
 subject = u'Python SMTP'
 message['Subject'] = Header(subject)
 message.attach(MIMEText('这是python3脚本邮件'))
