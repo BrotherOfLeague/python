@@ -13,19 +13,21 @@ def _format_addr(s):
 	name, addr = parseaddr(s)
 	return formataddr((Header(name,'utf-8').encode(),addr))
 
-from_addr = '18271676080@163.com'
-password = 'FBLATPX4869'
-to_addr = '846058904@qq.com'
-smtp_server = 'smtp.163.com'
+from_addr = '846058904@qq.com'
+password = 'hrukwfbytyqubecg'
+to_addr = '1830770433@qq.com'
+smtp_server = 'smtp.qq.com'
 
 send_time = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
 
-msg = MIMEText('''
-     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gbk"></meta></head><body><span align = center>发送时间：
-     ''' + send_time +
+''' 
++ send_time +
+'''
+
+msg = MIMEText(
      '''
-</span><style>
+     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gbk"></meta></head><body><style>
           html,body,div,p{margin:0;padding:0}
           body{font-size:14px;font-family:"microsoft yahei";background-color:#ffffff}
           table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
@@ -98,7 +100,15 @@ msg = MIMEText('''
           .eng .pr20{width:205px}
           .eng .pr20 .keys{width:100px}
           .eng .email{width:270px}
-        </style><table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column"><tbody><tr><td valign="top"><table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box1"><tbody><tr>
+            .sendemailtime{width:100%;text-align:center;font-weight:bold;font-size:24px}
+        </style><div class="sendemailtime">邮件发送时间:
+          
+''' 
++ send_time +
+'''
+
+        </div>        
+          <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column"><tbody><tr><td valign="top"><table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box1"><tbody><tr>
 <td class="hbox" align="middle"><img src="http://i.51job.com/resume/ajax/image.php?type=avatar&amp;userid=377422576&amp;key=70a0980dedcb928016a1bd3f1b236c30" width="85" height="104" class="head" alt="头像"></td>
 <td><table cellspacing="0" cellpadding="0" border="0" class="infr"><tbody>
 <tr>
@@ -213,15 +223,15 @@ msg = MIMEText('''
 </tr></thead>
 <tbody><tr>
 <td valign="top" class="keys">个人标签：</td>
-<td valign="top" class="txt1">
-<span class="tag">pyhon爬虫&nbsp;&nbsp;</span><span class="tag">Django&nbsp;&nbsp;</span><span class="tag">C/C++&nbsp;&nbsp;</span><span class="tag">Linux</span>
+<td valign="top" class="txt1"><b>
+<span class="tag">pyhon爬虫&nbsp;&nbsp;</span><span class="tag">Django&nbsp;&nbsp;</span><span class="tag">C/C++&nbsp;&nbsp;</span><span class="tag">Linux</span></b>
 </td>
 </tr></tbody>
 </table></td></tr>
 <tr>
 <td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
 <td valign="top" class="keys">期望薪资：</td>
-<td valign="top" class="txt2">13000-16000
+<td valign="top" class="txt2"><b>13000-16000</b>
                                             元/月
                                           </td>
 </tr></tbody></table></td>
@@ -617,7 +627,7 @@ msg = MIMEText('''
 </tbody></table></td></tr></tbody></table></td></tr>
 </tbody></table></td></tr>
 </tbody></table></td></tr></tbody></table></body></html>
-	''','html','utf-8')
+     ''','html','utf-8')
 # from_addr = input('From:')
 # password = input('Password:')
 # to_addr = input('To:')
