@@ -15,7 +15,7 @@ def _format_addr(s):
 
 from_addr = '846058904@qq.com'
 password = 'hrukwfbytyqubecg'
-to_addr = '1830770433@qq.com'
+to_addr = ['18271676080@163.com','wujj@melux.com','wpshr@kingsoft.com']
 smtp_server = 'smtp.qq.com'
 
 send_time = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
@@ -101,12 +101,10 @@ msg = MIMEText(
           .eng .pr20 .keys{width:100px}
           .eng .email{width:270px}
             .sendemailtime{width:100%;text-align:center;font-weight:bold;font-size:24px}
-        </style><div class="sendemailtime">邮件发送时间:
-          
+        </style><div class="sendemailtime">邮件发送时间:         
 ''' 
 + send_time +
 '''
-
         </div>        
           <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column"><tbody><tr><td valign="top"><table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box1"><tbody><tr>
 <td class="hbox" align="middle"><img src="http://i.51job.com/resume/ajax/image.php?type=avatar&amp;userid=377422576&amp;key=70a0980dedcb928016a1bd3f1b236c30" width="85" height="104" class="head" alt="头像"></td>
