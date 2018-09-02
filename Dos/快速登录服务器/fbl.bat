@@ -5,5 +5,4 @@ if %%i==IP set IP=%%j
 if %%i==Username set Username=%%j
 if %%i==Password set Password=%%j
 )
-echo %IP% - %Username% - %Password%
 START putty %Username%@%IP% -pw %Password%
