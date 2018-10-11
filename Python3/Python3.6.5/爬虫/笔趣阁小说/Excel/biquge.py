@@ -53,7 +53,7 @@ def adjustExist(url):
 		return (author,txtSize ,title)
 def main():
 	reWriteFlag = False
-	start_url = 6000
+	start_url = 6750
 	end_url = 30000
 	if start_url > end_url:
 		(end_url,start_url) = (start_url,end_url)
